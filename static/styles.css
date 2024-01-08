@@ -1,0 +1,260 @@
+/* Body */
+
+body {
+    background-image:
+    url('images/red_moon_longx.jpg');
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    min-height: 100vh;
+    background-size: contain;
+    background-color: rgb(12, 0, 0)
+    }
+
+
+/* Headers */
+
+.white_header {
+    color: rgb(165, 169, 180);
+    display: inline-block;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+.red_header {
+    color: rgb(169, 25, 25);
+}
+
+/* Buttons */
+
+button {
+    border-radius: 10px;
+    padding: 10px 30px;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+
+
+.Red_button {
+    background-color: #8e3429;
+    border-radius: 10px;
+    padding: 7px 25px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.Pink_button {
+    background-color: #d35f72;
+    border-radius: 10px;
+    padding: 7px 25px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.Orange_button {
+    background-color: #d66948;
+    border-radius: 10px;
+    padding: 7px 25px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.Yellow_button {
+    background-color: #d8cd74;
+    border-radius: 10px;
+    padding: 7px 25px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.Green_button {
+    background-color: #73924f;
+    border-radius: 10px;
+    padding: 7px 25px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.Blue_button {
+    background-color: #598689;
+    border-radius: 10px;
+    padding: 7px 25px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.Violet_button {
+    background-color: #613e5c;
+    border-radius: 10px;
+    padding: 7px 25px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.Silver_button {
+    background-color: #9e9e94;
+    border-radius: 10px;
+    padding: 7px 25px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+
+.Copper_button {
+    background-color: #85593c;
+    border-radius: 10px;
+    padding: 7px 25px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.Brown_button {
+    background-color: #3b2a20;
+    border-radius: 10px;
+    padding: 7px 25px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.Gray_button {
+    background-color: #767676;
+    border-radius: 10px;
+    padding: 7px 25px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.White_button {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 7px 25px;
+    color: black;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.Obsidian_button {
+    background-color: #25251d;
+    border-radius: 10px;
+    padding: 7px 25px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.Gold_button {
+    background-color: #e8ba65;
+    border-radius: 10px;
+    padding: 7px 25px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+
+
+/* Inputs */
+
+input {
+    width: 250px;
+    height: 45px;
+    padding-left: 10px;
+    color: #8e3429;
+    font-weight: bold;
+    background-color: #ffffff;
+    border-radius: 10px;
+
+}
+
+select {
+    width: 250px;
+    height: 45px;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-align: center;
+    color: #8e3429;
+    font-weight: bold;
+    background-color: #ffffff;
+    border-radius: 10px;
+}
+
+img {
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
+/* Size for brand */
+
+nav .navbar-brand
+{
+    font-size: xx-large;
+}
+
+/* Colors for brand */
+
+nav .navbar-brand .red
+{
+    color: rgb(169, 25, 25);
+}
+nav .navbar-brand .gold
+{
+    color: rgb(187, 165, 61);
+}
+
+nav .navbar-brand .black
+{
+    color: black;
+}
+
+
+
+table {
+    background-color: rgb(165, 169, 180, .5);
+    margin-bottom: 6rem;
+    width: 100%;
+}
+
+table th {
+    padding: 0.75rem;
+    vertical-align: middle;
+    border-bottom: 1px solid #A91919;
+    text-align: left;
+    color: white;
+}
+
+table td {
+    padding: 0.75rem;
+    vertical-align: middle;
+    text-align: left;
+    color: white;
+}
+
+
+tbody tr:nth-of-type(even) {
+    background-color: rgb(169, 25, 25, 0.5);
+}
+
+tbody tr:nth-of-type(odd) {
+    background-color: rgb(187, 165, 61, 0.5);
+}
+
+
+
+iframe {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    width: 50px;
+    height: 50px;
+}

@@ -1,0 +1,31 @@
+{% extends "red_rising_layout.html" %}
+
+{% block title %}
+Credits
+{% endblock %}
+
+{% block main %}
+
+
+
+    <p></p>
+
+    <div class="mb-3">
+        <h2 class = "white_header">Cards in the Red Rising Board Game</h2>
+        <p style="margin-bottom: 5em;"></p>
+    </div>
+    <div style="display: flex; justify-content: center; min-height: 100vh;">
+
+
+        {% for character_group in character_cards | batch(7) %}
+            <div>
+                {% for character_card in character_group %}
+                    <img src="../static/images/characters/{{ character_card.character }}.jpg" alt="{{ character_card.character }} Card" width = auto height = "300" style="display: block; margin: auto;">
+                {% endfor %}
+            </div>
+        {% endfor %}
+
+    </div>
+{% endblock %}
+
+

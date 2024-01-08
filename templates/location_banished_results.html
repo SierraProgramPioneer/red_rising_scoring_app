@@ -1,0 +1,61 @@
+{% extends "red_rising_layout.html" %}
+
+{% block title %}
+    Location & Banished Results
+{% endblock %}
+
+{% block main %}
+
+<h3 class = "white_header" style="display: flex; align-items: center; justify-content: flex-start; margin-left: 200px;">Input Banished Cards</h3> <h5 class = "white_header" style="display: flex; align-items: center; justify-content: flex-start; margin-left: 200px;"> &mdash; Please Note that Empty Fields Will be Recorded as Zero, Only Enter Values Relevant to Scoring</h5>
+<p style="margin-bottom: 2em;"></p>
+
+    <form action="/location_banished_record" method="post">
+            <div class="mb-3">
+                <div style="display: flex; align-items: center; justify-content: flex-start; margin-left: 200px;"></div>
+
+                    <div style="display: flex; align-items: center; justify-content: flex-start;">
+                        <h5 class = "white_header" style="display: flex; align-items: center; justify-content: flex-start; margin-left: 200px;">Banished Blues:</h5>
+                        <input autocomplete="off" type="number" min="0" max="7" id="banished_blues" name="banished_blues" placeholder="Number of Banished Blues">
+                        <p style="margin-bottom: 4em;"></p>
+                    </div>
+
+                    <div style="display: flex; align-items: center; justify-content: flex-start;">
+                        <h5 class = "white_header" style="display: flex; align-items: center; justify-content: flex-start; margin-left: 200px;">Banished Reds:</h5>
+                        <input autocomplete="off" type="number" min="0" max="7" id="banished_reds" name="banished_reds" placeholder="Number of Banished Reds">
+                        <p style="margin-bottom: 4em;"></p>
+                    </div>
+
+                    <div style="display: flex; align-items: center; justify-content: flex-start;">
+                        <h5 class = "white_header" style="display: flex; align-items: center; justify-content: flex-start; margin-left: 200px;">Total Banished Cards:</h5>
+                        <input autocomplete="off" type="number" min="0" max="50" id="banished_cards" name="banished_count" placeholder="Number of Banished Cards">
+                        <p style="margin-bottom: 4em;"></p>
+                    </div>
+                </div>
+    <p style="margin-bottom: 5em;"></p>
+
+<h3 class = "white_header" style="display: flex; align-items: center; justify-content: flex-start; margin-left: 200px;">Input Cards on All Locations</h3> <h5 class = "white_header" style="display: flex; align-items: center; justify-content: flex-start; margin-left: 200px;"> &mdash; Please Note that Empty Fields Will be Recorded as Zero, Only Enter Values Relevant to Scoring</h5>
+<p style="margin-bottom: 4em;"></p>
+                {% for color_group in session['colors'] | batch(3) %}
+                <div class="mb-3">
+                    <div style="display: flex; align-items: center; justify-content: flex-start; margin-left: 200px;">
+                        {% for color in color_group %}
+                        <h5 class = "white_header">{{ color['color'] }}s on All Locations:</h5>
+                        <input autocomplete="off" type="number" id="location_{{ color['color'] }}" name="location_{{ color['color'] }}" placeholder="# of {{ color['color'] }} on All Locations">
+                        {% endfor %}
+                    </div>
+                </div>
+                {% endfor %}
+<p style="margin-bottom: 2em;"></p>
+            <div style="display: flex; align-items: center; justify-content: flex-start; margin-left: 200px;">
+                <h5 class = "white_header">Are there any locations with no cards or the top card is facedown?</5>
+                <select name="none_face_down" style="margin-left: 20px;">
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+                <p style="margin-bottom: 2em;"></p>
+            </div>
+        <button class="Red_button" style = "float: left; margin-left: 200px" type="submit">Record Banished Cards and Location Cards!</button>
+        <div class="mb-3">
+     </form>
+    </div>
+{% endblock %}

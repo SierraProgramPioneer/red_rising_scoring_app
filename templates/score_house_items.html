@@ -1,0 +1,81 @@
+{% extends "red_rising_layout.html" %}
+
+{% block title %}
+    Score House Items
+{% endblock %}
+
+{% block main %}
+
+    <h3 class = "white_header">Select Your House Items</h3>
+    <p style="margin-bottom: 2em;"></p>
+
+    <form action="/score_house_items" method="post">
+            {% for player in session['players']%}
+            <div class="mb-3">
+                <h5 class = "white_header">{{ player }}'s House Item Counts</h5>
+                <p style="margin-bottom: 1em;"></p>
+                <img src="../static/images/fleet.jpg" alt="Red Rising Logo" width ="50" height = "45"><input autocomplete="off" autofocus type="number" min="0" max="10" id="{{ player }}_fleet_count" name="{{ player }}_fleet_count" placeholder="Fleet Track Count Count">
+                <img src="../static/images/mars.jpg" alt="Red Rising Logo" width ="50" height = "45"><input autocomplete="off" type="number" min="0" max="20" id="{{ player }}_helium_count" name="{{ player }}_helium_count" placeholder="Helium Count">
+                <img src="../static/images/influence.png" alt="Red Rising Logo" width ="55" height = "55"><input autocomplete="off" type="number" min="0" max="10" id="{{ player }}_influence_count" name="{{ player }}_influence_count" placeholder="Influence Count">
+            </div>
+            <p style="margin-bottom: 2em;"></p>
+            {% endfor %}
+            <img src="../static/images/sovereign.png" alt="Red Rising Logo" widht ="85" height = "85">
+            <br>
+            <h5 class = "white_header">Who has the Sovereign Token?</h5>
+            <p style="margin-bottom: 2em;"></p>
+            <select name="sovereign_token_holder">
+                {% for player in session['players']%}
+                <option value="{{player}}">{{player}}</option>
+                {% endfor %}
+            </select>
+        <p style="margin-bottom: 4em;"></p>
+        <h5 class = "white_header">* Rember to Handle Game End Actions First</h5>
+        <p style="margin-bottom: 2em;"></p>
+        <button class="Red_button" type="submit" name="update" value="update">Update Items</button>
+        <p style="margin-bottom: 2em;"></p>
+        <p style="margin-bottom: 2em;"></p>
+        <div class="mb-3">
+            {% if current_house_scores%}
+            <table>
+                <thead>
+                    <tr>
+                        <th>Player Name</th>
+                        <th>Fleet Count</th>
+                        <th>Fleet Score</th>
+                        <th>Helium Count</th>
+                        <th>Helium Score</th>
+                        <th>Influence Count</th>
+                        <th>Influence Score</th>
+                        <th>Sovereign Token</th>
+                        <th>Sovereign Token Score</th>
+                        <th>Current Score</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for current_house_score in current_house_scores %}
+                        <tr>
+                            <td>{{ current_house_score.user_name}}</td>
+                            <td>{{ current_house_score.fleet_count}}</td>
+                            <td>{{ current_house_score.fleet_score}}</td>
+                            <td>{{ current_house_score.helium_count}}</td>
+                            <td>{{ current_house_score.helium_score}}</td>
+                            <td>{{ current_house_score.influence_count}}</td>
+                            <td>{{ current_house_score.influence_scores}}</td>
+                            <td>{{ current_house_score.sovereign_token | capitalize }}</td>
+                            <td>{{ current_house_score.sovereign_score}}</td>
+                            <td>{{ current_house_score.hand_total}}</td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+            <button class="Red_button" type="submit" name="update" value="final">Submit House Items</button>
+            {% else %}
+            <p></p>
+            <h6 class = "white_header">No House Items to Display</h6>
+            {% endif %}
+            <p></p>
+
+    </form>
+    </div>
+{% endblock %}

@@ -1,0 +1,81 @@
+{% extends "red_rising_layout.html" %}
+
+{% block title %}
+    Add Cards to Hand
+{% endblock %}
+
+{% block main %}
+
+    <h3 class = "white_header">Select Cards in Each Players Hand at end of Game!</h3>
+
+    <p></p>
+
+            {% for player in session['players'] %}
+            <h4 class = "white_header">Select the Cards in {{player}}'s Hand:</h4>
+            <p style="margin-bottom: 2em;"></p>
+
+            <form action="/add_cards" method="post">
+                <div class="mb-3">
+                    {% for card in session['cards'] %}
+                    <button class="character {{ card.color }}_button"  data-user_name = "{{ player }}" data-game_number = "{{ session['game_number'] }}" value="{{ card.character }}">{{ card.character }}</button>
+                    {% endfor %}
+                </div>
+            </form>
+            <p style="margin-bottom: 2em;"></p>
+            {% endfor %}
+            <p></p>
+
+    <p style="margin-bottom: 4em;"></p>
+    <form action="/add_cards" method="post">
+        <button class= "Red_button" type="submit">Save Hand and Select Game End Action Adjustments</button>
+        <p style="margin-bottom: 2em;"></p>
+    </form>
+    {% if session['hand_cards'] %}
+        {% for hand_card in session['hand_cards'] %}
+            <div style="display: inline-block; text-align: center; margin: 20px;">
+                <img src="../static/images/characters/{{ hand_card.character }}.jpg" alt="{{ hand_card.character }} Card" width = auto height = "225" style="display: block; margin: auto;">
+                <h5 class = "white_header" style="padding-top: 10px;">Is in {{ hand_card.user_name }}'s <br> Hand</h5>
+            </div>
+        {% endfor %}
+    {% else %}
+    <h6 class = "white_header">No Cards in Hand to Display</h6>
+    {% endif %}
+
+
+    <script>
+     document.addEventListener('DOMContentLoaded', function(){
+        // Add Card Function
+        function add_card(event){
+            event.preventDefault()
+            let card = {
+                user_name: event.target.dataset.user_name,
+                game_number: event.target.dataset.game_number,
+                character: event.target.value
+            }
+            let jsonString = JSON.stringify(card);
+            fetch('/add_cards', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: jsonString
+
+            })
+                .then(response => response.json())
+                .then(data => {
+                if (data.refresh) {
+                    location.reload();
+        }
+            });
+        }
+
+        //Apply Event Listener to Each Character Button
+        let character = document.querySelectorAll('.character');
+        for (let i = 0; i < character.length; i++) {
+            character[i].addEventListener('click', add_card);
+        }
+        });
+    </script>
+
+{% endblock %}
+

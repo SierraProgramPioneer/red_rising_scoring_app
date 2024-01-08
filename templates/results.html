@@ -1,0 +1,20 @@
+{% extends "red_rising_layout.html" %}
+
+{% block title %}
+Game Result
+{% endblock %}
+
+{% block main %}
+
+    <h1 class = "white_header">Game Result:</h1>
+    <p></p>
+    <div class="mb-3">
+        <h1 class = "white_header">{{ session['winner'] }} Wins!!!!!</h1>
+        <p style="margin-bottom: 2em;"></p>
+        <div class="mb-3">
+            <a href = "/new_game"><img src="../static/images/red_rising_logo.png" alt="Red Rising Logo"></a>
+            <p style="margin-bottom: 2em;"></p>
+            <h2 class = "white_header">Score Another Game!</h2>
+        </div>
+    </div>
+{% endblock %}

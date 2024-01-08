@@ -1,0 +1,73 @@
+{% extends "red_rising_layout.html" %}
+
+{% block title %}
+    Game End Action Points
+{% endblock %}
+
+{% block main %}
+
+    <h3 class = "white_header" style="display: flex; align-items: center; justify-content: flex-start; margin-left: 200px;">Input Additional Values for Cards</h3>
+    <p style="margin-bottom: 2em;"></p>
+    <h5 class = "white_header" style="display: flex; align-items: center; justify-content: flex-start; margin-left: 200px;">**Only Applies to Hacker, Developer, Orange Cards, and Gray Cards in Player's Hands</h5>
+    <p style="margin-bottom: 4em;"></p>
+
+
+    <form action="/game_end_actions" method="post">
+            <div class="mb-3">
+                <div style="display: flex; align-items: center; justify-content: flex-start; ">
+                    <!-- Check if Hacker Present and Prompt for Core of Top Card of Deck -->
+                    {% for card in session['hacker'] %}
+                    <h5 class = "white_header" style = "float: left; margin-left: 200px">Hacker &mdash; Scores Core of Top Card of Deck:</h5>
+                    <input autocomplete="off" autofocus  type="number" min="0" max="40" id="top_core_hacker" name="top_core_hacker" placeholder="Top Card Core">
+                    {% endfor %}
+                </div>
+    <p style="margin-bottom: 2em;"></p>
+
+                <div style="display: flex; align-items: center; justify-content: flex-start; ">
+                    <!-- Check if Developer Present and Prompt for Core of Top Card of Any location -->
+                    {% for card in session['developer'] %}
+                        <h5 class = "white_header" style = "float: left; margin-left: 200px">Developer &mdash; Scores Core of Top Card of any location:</h5>
+                        <input style = "float: left;" autocomplete="off" autofocus type="number" min="0" max="40" id="top_core_developer" name="top_core_developer" placeholder="Top Card Core">
+                    {% endfor %}
+                </div>
+    <p style="margin-bottom: 2em;"></p>
+
+
+                <div style="display: flex; align-items: center; justify-content: flex-start; ">
+                    <!-- Get Additional Colors for Grays in Hand -->
+                    {% for gray in session['grays'] %}
+                    <h5 class = "white_header" style = "float: left; margin-left: 200px">{{ gray['character'] }} &mdash; What other color would you like this card to be?</h5>
+                    <select name="{{ gray['character'] }}_other_color">
+                        {% for color in session['colors'] %}
+                        <option value="{{ color['color'] }}">{{ color['color'] }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                    {% endfor %}
+                </div>
+
+    <p style="margin-bottom: 2em;"></p>
+
+
+                <div style="display: flex; align-items: center; justify-content: flex-start; ">
+                    <!-- Get Alternative Character Name for Oranges in Hand -->
+                    {% for orange in session['oranges'] %}
+                    <h5 class = "white_header" style = "float: left; margin-left: 200px">{{ orange['character'] }} &mdash; What character would you like to change this card's name to ?</h5>
+                    <select name="{{ orange['character'] }}_change_character">
+                        {% for character in session['cards'] %}
+                        <option value="{{ character['character'] }}">{{ character['character'] }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                    {% endfor %}
+                </div>
+
+<p style="margin-bottom: 2em;"></p>
+
+
+
+        <p style="margin-bottom: 5em;"></p>
+        <button class="Red_button" style = "float: left; margin-left: 200px" type="submit" name="game_end_actions">Finalize Hand Score!</button>
+     </form>
+    </div>
+{% endblock %}

@@ -1,0 +1,46 @@
+{% extends "red_rising_layout.html" %}
+
+{% block title %}
+    Scoring
+{% endblock %}
+
+{% block main %}
+
+    {% if number_players %}
+
+    <h3 class = "white_header">Enter Player Names</h3>
+    <p style="margin-bottom: 2em;"></p>
+    <form action="/new_game" method="post">
+        {% for i in range(number_players) %}
+            <div class="mb-3">
+                    <input autocomplete="off" autofocus type="text" id="player{{i+1}}" name="player{{i+1}}" placeholder="Player {{i+1}} Name" required>
+                </div>
+        {% endfor %}
+        <p style="margin-bottom: 2em;"></p>
+        <button class="Red_button" type="submit">Confirm Player Names</button>
+    </form>
+
+    {% else %}
+
+
+    <h2 class = "white_header">Start a New Game!</h2>
+    <br>
+    <h3 class = "white_header">Select the Number of Players</h3>
+    <p style="margin-bottom: 2em;"></p>
+    <form action="/new_game" method="post">
+        <div class="mb-3">
+            <select name="number_players">
+                <option value=2>2</option>
+                <option value=3>3</option>
+                <option value=4>4</option>
+                <option value=5>5</option>
+                <option value=6>6</option>
+            </select>
+        </div>
+        <p style="margin-bottom: 2em;"></p>
+        <button class="Red_button" type="submit">Confirm Number of Players</button>
+    </form>
+
+    {% endif %}
+
+{% endblock %}

@@ -1,0 +1,44 @@
+{% extends "red_rising_layout.html" %}
+
+{% block title %}
+    Hand total
+{% endblock %}
+
+{% block main %}
+
+<h3 class = "white_header">Summary of Points in Hand</h3>
+<p></p>
+<div class="mb-3">
+    <table>
+        <thead>
+            <tr>
+                <th>Player Name</th>
+                <th>Character</th>
+                <th>Color</th>
+                <th>Core</th>
+                <th>Condition 1 Points</th>
+                <th>Condition 2 Points</th>
+                <th>Card Total</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for hand_card in session['hand_cards'] %}
+            <tr>
+                <td>{{ hand_card.user_name}}</td>
+                <td>{{ hand_card.character}}</td>
+                <td>{{ hand_card.color}}</td>
+                <td>{{ hand_card.core}}</td>
+                <td>{{ hand_card.c1p}}</td>
+                <td>{{ hand_card.c2p}}</td>
+                <td>{{ hand_card.card_total}}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+</div>
+
+    <form action="/hand_total" method="post">
+        <button class="Red_button" type="submit">View Results!</button>
+    </form>
+{% endblock %}

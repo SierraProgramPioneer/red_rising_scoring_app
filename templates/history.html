@@ -1,0 +1,57 @@
+{% extends "red_rising_layout.html" %}
+
+{% block title %}
+    Past Scores
+{% endblock %}
+
+{% block main %}
+
+    <h3 class = "white_header">Past Game Scores</h3>
+    <p style="margin-bottom: 2em;"></p>
+    <div class="mb-3">
+        {% if past_games%}
+        <table>
+            <thead>
+                <tr>
+                    <th>Game Number</th>
+                    <th>Player Name</th>
+                    <th>Fleet Count</th>
+                    <th>Fleet Score</th>
+                    <th>Helium Count</th>
+                    <th>Helium Score</th>
+                    <th>Influence Count</th>
+                    <th>Influence Score</th>
+                    <th>Sovereign Token</th>
+                    <th>Sovereign Token Score</th>
+                    <th>Cards in Hand Penalty</th>
+                    <th>Total Points</th>
+                    <th>Result</th>
+                    <th>Date</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for past_game in past_games %}
+                    <tr>
+                        <td>{{ past_game.game_number}}</td>
+                        <td>{{ past_game.user_name}}</td>
+                        <td>{{ past_game.fleet_count}}</td>
+                        <td>{{ past_game.fleet_score}}</td>
+                        <td>{{ past_game.helium_count}}</td>
+                        <td>{{ past_game.helium_score}}</td>
+                        <td>{{ past_game.influence_count}}</td>
+                        <td>{{ past_game.influence_scores}}</td>
+                        <td>{{ past_game.sovereign_token | capitalize }}</td>
+                        <td>{{ past_game.sovereign_score}}</td>
+                        <td>{{ past_game.card_count_score}}</td>
+                        <td>{{ past_game.hand_total}}</td>
+                        <td>{{ past_game.result}}</td>
+                        <td>{{ past_game.date}}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        {% else %}
+        <h6 class = "white_header">No Past Games to Display</h6>
+        {% endif %}
+    </div>
+{% endblock %}

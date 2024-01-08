@@ -1,0 +1,112 @@
+Invictus,Blue,19,If you are the most advanced on the fleet track (or tied for the most),16,If an opponnent is more advanced on the fleet track,9
+Morning,Blue,35,"Unless with Orion, Virga, or Pelus",15,N/A,0
+Orion,Blue,18,If with Pax au Telemanus or The Pax,10,Gain points equal to your position on the fleet track (0-10),0
+Pelus,Blue,5,If your fleet track position is 5-7,20,if your fleet track position is 8-10,35
+Quietus,Blue,14,If you have the most influence on the influence on the institute (or tied for the most),16,N/A,0
+The Pax,Blue,20,"If with Darrow, Sevro, Orion, Virga, or Pelus",15,N/A,0
+Virga,Blue,10,if your fleet track position is 6-8,15,if your fleet track position is 9 or 10,30
+Artisan Chef,Brown,10,For each Gold,5,Ignore any lost points from Golds,0
+Assassin,Brown,5,For each Obsidian,5,N/A,0
+Gardener,Brown,10,For each Violet & Pink,5,N/A,0
+Janitor,Brown,10,"For each Green, Yellow, and Blue",5,N/A,0
+Mess Hall Cook,Brown,10,For each Gray and Orange,5,N/A,0
+Modjob,Brown,10,For each Red and Brown (Including Modjob),5,N/A,0
+Nanny,Brown,10,"For each Silver, White, and Copper",5,N/A,0
+Administrator,Copper,15,If you have the least Influence on the Institute (or tied for the least),15,N/A,0
+Auctioneer,Copper,12,N/A,0,N/A,0
+Bondilus,Copper,20,If you have the Sovereign token,5,If with a Gold,5
+Diplomat,Copper,16,If you and any opponent have the exact same amount of Influence on the Institute,19,N/A,0
+Lawyer,Copper,13,If with a White (not the Judge),12,If with the Judge,22
+Politician,Copper,15,If you have the most Influence on the Institute (or tied for the most),15,N/A,0
+Timony,Copper,10,For each of your Influence tokens on the Institute,3,N/A,0
+Ash Lord,Gold,25,For each Blue,5,For each banished Blue,5
+Cassius,Gold,25,If with both Mustang & Darrow,40,If with Darrow (but not Mustang),20
+Karnus,Gold,15,If with Cassius,30,"If with Mustang, The Jackal, or Nero",15
+Mustang,Gold,20,For each different color,5,N/A,0
+Pax Au Telemanus,Gold,15,If with an Obsidian or Mustang,20,N/A,0
+Roque,Gold,20,For each Blue,5,N/A,0
+The Howlers,Gold,20,If with Sevro,20,N/A,0
+The Jackal,Gold,10,If you have the Sovereign Token,30,If with Darrow or Octavia,30
+The Telemanuses,Gold,20,If with Pax au Telemanus or The Pax,15,N/A,0
+Aja,Gold,15,If with Octavia,15,N/A,0
+Antonia,Gold,15,If with The Jackal or 2 other Golds,15,If with Victra or Sevro,15
+Bone Riders,Gold,15,If with the Jackal or a Gray,15,N/A,0
+Fitchner,Gold,25,if with a Red,10,If with Sevro or Darrow,10
+Lorn,Gold,20,If with no other Golds,15,N/A,0
+Lysander,Gold,10,"If you have the Sovereign Token, Octavia, or Cassius",20,N/A,0
+Nero,Gold,25,If you have the Sovereign Token,10,"Each for Cassius, Karnus, and Octavia",5
+Octavia,Gold,30,If you don't have either the Sovereign token or Lysander,30,N/A,0
+Romulus,Gold,25,If you have the Sovereign Token,15,If with Roque or Octavia or without a Blue,25
+Sevro,Gold,15,"If with Victra, The Howler's, or a Red",20,N/A,0
+Tactus,Gold,20,"If with Octavia, Darrow, or a Pink",20,N/A,0
+Victra,Gold,20,If with the Howlers,10,If with Sevro or Darrow,10
+Colonel Valentine,Gray,10,For each gold on all locations,5,N/A,0
+Danto,Gray,10,For each copper and white on all locations,5,N/A,0
+Trigg,Gray,15,For each gray and yellow on all locations,5,N/A,0
+Bridge,Gray,15,For each pink and violet on all locations,5,N/A,0
+Holiday,Gray,15,For each orange and blue on all location,5,N/A,0
+Sun-Hwa,Gray,15,For each obsidian and green on all locations,5,N/A,0
+Ugly Dan,Gray,20,For each red and brown on all locations,5,N/A,0
+Codebreaker,Green,8,If the first letter of the names of your card are all different,22,N/A,0
+Developer,Green,9,Gain the core value of the top card of any location,,N/A,0
+Firewall Expert,Green,13,If there is at least 1 location with no cards or where the top card is face down,22,N/A,0
+Hacker,Green,15,N/A,0,N/A,0
+Holo Designer,Green,7,If with a Violet,28,N/A,0
+Online Gambler,Green,7,N/A,0,N/A,0
+Dataport Specialist,Green,9,If with a blue,26,N/A,0
+Alfrum,Obsidian,10,If with Nero,10,If with Jopho,10
+Alia Snow Sparrow,Obsidian,16,"If only with golds, grays, and/ or obsidians",24,N/A,0
+Helga,Obsidian,14,If with Pax au Telemanus or The Pax,14,N/A,0
+Jopho,Obsidian,10,If with Alfrun,10,If with Nero,10
+Ragnar,Obsidian,20,If with an orange,10,If with Sefi,10
+Sefi,Obsidian,20,If with Ragnar,20,For each gold,5
+Stained,Obsidian,15,If this is your only obsidian,15,N/A,0
+Aegis Craftsman,Orange,15,If with a Gold or Red but not both,10,If with no Obsidians,10
+Artificer,Orange,10,If with both another Orange and a Gold,20,N/A,0
+Cyther,Orange,14,If with a Blue,16,N/A,0
+Gravboot Cobbler,Orange,16,If with a Gold or Gray,14,N/A,0
+Pulse Armorer,Orange,13,If with a Gray,17,N/A,0
+Pulse Fist Engineer,Orange,12,If with Obsidian,18,N/A,0
+Razor Designer,Orange,17,If with a Gold and no Obsidians,13,N/A,0
+Evey,Pink,15,If with Darrow,15,If with Mickey,15
+Calliope,Pink,15,If with the Jackal,20,N/A,0
+Conversationalist,Pink,15,If with a White (not the Judge),15,N/A,0
+Garden-Trained Rose,Pink,16,If with a Silver,14,N/A,0
+Masseuse,Pink,14,If with a Copper,16,N/A,0
+Matteo,Pink,13,If with a Pink or Quicksilver,17,N/A,0
+Theodora,Pink,16,If with a Gold or Red but not both,14,N/A,0
+Arlus,Red,10,If with no Golds,25,N/A,0
+Dancer,Red,8,If with no Grays,11,If with no Golds,11
+Darrow,Red,10,If you have 7 or more cards (including Darrow),30,N/A,0
+Deanna,Red,9,If with another Red,26,N/A,0
+Eo,Red,10,For each other Red,10,If with a Gray (except Bridge),10
+Harmony,Red,7,"If with only Reds, Pinks, Browns, and/or Obsidians",33,N/A,0
+Uncel Narol,Red,10,If with only cards having core values of at least 20 points,40,N/A,0
+Banker,Silver,10,N/A,0,N/A,0
+CEO,Silver,12,If you have at least 5 helium,18,N/A,0
+Investor,Silver,15,N/A,0,N/A,0
+Loan Shark,Silver,13,If you have at least 7 cards,7,N/A,0
+Quicksilver,Silver,40,If any opponent has more Helium than you,30,N/A,0
+Stock Broker,Silver,10,For each Helium (Max 25 Points),5,N/A,0
+Sponser,Silver,20,For each of your influence tokens on the Institute,2,N/A,0
+Reporter,Violet,6,If you have the most helium (or tied for the most),29,N/A,0
+4D Painter,Violet,9,If each of your cards is a different color,31,N/A,0
+Holo Host,Violet,12,If you have the most influence on the institute (or tied for the most),18,N/A,0
+Mickey the Carver,Violet,15,If there is at least 1 banished red,10,If with a gold,10
+Musician,Violet,8,If the core value of each of your cards is an even number,32,N/A,0
+Vlogger,Violet,7,If you are the furtherst on the fleet track (or tied for the furthest),23,N/A,0
+Zanzibar,Violet,9,If the core value of each of your cards is an odd number,31,N/A,0
+Judge,White,10,For each of your cards,3,N/A,0
+Justice,White,15,N/A,0,N/A,0
+Magistrate,White,20,"If you have at least 3 Helium, 3 Influence on the Institue, and at least level 3 on the Fleet Track",15,N/A,0
+Martyr,White,15,N/A,0,N/A,0
+Orator,White,19,If you don't have the Sovereign token,21,N/A,0
+Priestess,White,20,If with only cards having core values of at least 20 points,20,N/A,0
+Seer,White,19,If you have the Soverign token,11,N/A,0
+Dr. Virany,Yellow,9,N/A,0,N/A,0
+Group Counselor,Yellow,35,Per banished card,1,N/A,0
+Hypnotist,Yellow,15,N/A,0,N/A,0
+Pathologist,Yellow,5,If there are 5-9 banished cards at the beginning of end-game scoring,10,If there are at least 10 banished cards at the beginning of end-game scoring,25
+Psychologist,Yellow,20,N/A,0,N/A,0
+Researcher,Yellow,13,If there are 4 or fewer banished cards at the beginning of end-game scoring,13,N/A,0
+Surgeon,Yellow,0,For each Gold,5,N/A,0
