@@ -1,19 +1,35 @@
 # Red Rising Scoring App
 
+#### By __**Melissa Parker**__
+
+#### A scoring app for the Red Rising Board Game
+
 #### Video Demo:  https://youtu.be/4aLTRR7fWRg
-#### Description:
 
-The Red Rising Scoring App exists to improve  the enjoyment of playing the Red Rising Board Game by providing a fast and efficient way to calculate game scoring vs. calculating the scores manually.  The app scores House Items and then prompts users for the cards within their hands.  It then runs several comparisons to total not only the core points of each card but also the conditional points the card did or did not score.
+## Technologies Used
 
+* Python
+* Flask
+* SQLite3
+* JavaScript
+* HTML
+* CSS
+* Jinja2
 
-#### **Site Navigation:**
+## Description
+
+The Red Rising Scoring App exists to improve  the enjoyment of playing the Red Rising Board Game by providing a fast and efficient way to calculate game scoring vs. calculating the scores manually.  The app gathers the count of each player's House Items and calculates those points.  Then players are prompted for the cards within their hands.  The application then runs several comparisons to total not only the core points of each card but also the conditional points the card did or did not score.
+
+## Application Set Up & Navigation
+
+##### **Site Navigation:**
 * **Home:** Home screen welcomes user and prompts user to score a new game
 * **Score a New Game:** Starts a new game to score, detailed in the Implementation of Scoring section
 * **Past Scores:**  A table detailing the scores of all past games
 * **Credits:**  A page giving credit to Pierce Brown the author of the Red Rising Series and to Stonemaier Games, the creator the Red Rising Board Game
 
 
-#### **Implementation of Scoring:**
+##### **Implementation of Scoring:**
 App.py implements the following routes which each accomplish an import aspect of scoring a new game.
 
 
@@ -55,7 +71,7 @@ App.py implements the following routes which each accomplish an import aspect of
     * Users will be routed to a results page that will display the name of the game's winner
 
 
-#### **Files in Project:**
+##### **Files in Project:**
 
 * **database:** Database information used within application
     * **cards.csv:** The Original CSV file of character cards, used to create character_cards table in red_rising.db file
@@ -94,3 +110,10 @@ App.py implements the following routes which each accomplish an import aspect of
 
 * **TODO_and_CODES.txt:** Details desired updates and snippets of code for reference
 
+
+## Known Bugs
+Although each card in the game has undergone testing to ensure that the expected results are produced, the limitless card combination possibilities mean that not every instance of a card's potential have been verified.  Users are encouraged to contact the developer if scoring errors occur.
+
+## Licensing
+
+[MIT](https://choosealicense.com/licenses/mit/)
