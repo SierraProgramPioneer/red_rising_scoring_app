@@ -39,7 +39,7 @@ def after_request(response):
 @app.route("/")
 def home():
     """Display Home Page"""
-    return render_template("home.html")
+    return render_template("index.html")
 
 @app.route("/credits", methods=["GET"])
 def credits():

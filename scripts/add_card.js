@@ -1,7 +1,7 @@
-document.addEventListener('DOMContentLoaded', function(){
+window.onload = function () {
 
     // Add Card Function
-    function add_card(event){
+    function add_card(event) {
         event.preventDefault()
         let card = {
             user_name: event.target.dataset.user_name,
@@ -15,7 +15,14 @@ document.addEventListener('DOMContentLoaded', function(){
                 'Content-Type': 'application/json'
             },
             body: jsonString
-        });
+
+        })
+            .then(response => response.json())
+            .then(data => {
+                if (data.refresh) {
+                    location.reload();
+                }
+            });
     }
 
     //Apply Event Listener to Each Character Button
@@ -23,4 +30,5 @@ document.addEventListener('DOMContentLoaded', function(){
     for (let i = 0; i < character.length; i++) {
         character[i].addEventListener('click', add_card);
     }
-    });
+
+}
