@@ -116,4 +116,4 @@ Although each card in the game has undergone testing to ensure that the expected
 
 ## Licensing
 
-[MIT](https://choosealicense.com/licenses/mit/)
+[MIT](https://choosealicense.com/licenses/mit/) © Melissa Parker 2024
